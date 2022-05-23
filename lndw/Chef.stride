@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Chef" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Will den Dieb fangen so das er nicht alle Laptops klaut</javadoc>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable final="true" type="GreenfootImage" type-java="GreenfootImage" name="img" value="getImage()" value-java="getImage()" enable="true"/>
+                <call expression="img.scale(90,90)" expression-java="img.scale(90, 90)" enable="true"/>
+                <call expression="setImage(img)" expression-java="setImage(img)" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the Chef wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="move(5)" expression-java="move(5)" enable="true"/>
+                <if condition="isAtEdge()" condition-java="isAtEdge()" enable="true">
+                    <ifStatements>
+                        <call expression="turn(17)" expression-java="turn(17)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="isTouching(Versteck.class)" condition-java="isTouching(Versteck.class)" enable="true">
+                    <ifStatements>
+                        <call expression="turn(35)" expression-java="turn(35)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.getRandomNumber(100)&gt;90" condition-java="Greenfoot.getRandomNumber(100) &gt; 90" enable="true">
+                    <ifStatements>
+                        <call expression="turn(Greenfoot.getRandomNumber(90)-45)" expression-java="turn(Greenfoot.getRandomNumber(90) - 45)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="isTouching(Dieb.class)" condition-java="isTouching(Dieb.class)" enable="true">
+                    <ifStatements>
+                        <call expression="removeTouching(Dieb.class)" expression-java="removeTouching(Dieb.class)" enable="true"/>
+                        <call expression="getWorld().showText(&quot;Verloren&quot;,300,300)" expression-java="getWorld().showText(&quot;Verloren&quot;, 300, 300)" enable="true"/>
+                        <call expression="Greenfoot.stop()" expression-java="Greenfoot.stop()" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>

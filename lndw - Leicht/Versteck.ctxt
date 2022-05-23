@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Versteck
+comment0.text=\n\ L\u00E4sst\ den\ Chef\ nicht\ durch\ aber\ der\ Dieb\ kann\ sich\ dahinter\ verstecken\n
+comment1.params=
+comment1.target=Versteck()
+comment1.text=\n\ \n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Versteck\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=3

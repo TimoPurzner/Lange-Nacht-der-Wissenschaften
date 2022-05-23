@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Dieb" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="GreenfootImage" type-java="GreenfootImage" name="avatar" value="getImage()" value-java="getImage()" enable="true"/>
+                <call expression="avatar.scale(60,80)" expression-java="avatar.scale(60, 80)" enable="true"/>
+                <call expression="setImage(avatar)" expression-java="setImage(avatar)" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="checkKeyPress" enable="true">
+            <javadoc xml:space="preserve">Steuert den Dieb in eine Richtung abhängig davon welche Taste der Nutzer gedrückt hat</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="Greenfoot.isKeyDown(&quot;right&quot;)" condition-java="Greenfoot.isKeyDown(&quot;right&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="setRotation(0)" expression-java="setRotation(0)" enable="true"/>
+                        <call expression="move(5)" expression-java="move(5)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;down&quot;)" condition-java="Greenfoot.isKeyDown(&quot;down&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="setRotation(90)" expression-java="setRotation(90)" enable="true"/>
+                        <call expression="move(5)" expression-java="move(5)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the Arbeiter wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="checkKeyPress()" expression-java="checkKeyPress()" enable="true"/>
+                <call expression="checkForLaptop()" expression-java="checkForLaptop()" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="checkForLaptop" enable="true">
+            <javadoc xml:space="preserve">Überprüft ob der Dieb einen Laptop berührt und klaut ihn. Außerdem ist das Spiel beendet wenn es keine Laptops mehr gibt</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="isTouching(Laptop.class)" condition-java="isTouching(Laptop.class)" enable="true">
+                    <ifStatements>
+                        <call expression="removeTouching(Laptop.class)" expression-java="removeTouching(Laptop.class)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>

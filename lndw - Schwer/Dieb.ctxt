@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Dieb
+comment0.text=\n\ \n
+comment1.params=
+comment1.target=Dieb()
+comment1.text=\n\ \n
+comment2.params=
+comment2.target=void\ checkKeyPress()
+comment2.text=\n\ Steuert\ den\ Dieb\ in\ eine\ Richtung\ abh\u00E4ngig\ davon\ welche\ Taste\ der\ Nutzer\ gedr\u00FCckt\ hat\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Arbeiter\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=4

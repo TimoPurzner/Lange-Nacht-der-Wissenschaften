@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Office" extends="World" extends-java="World" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Enthält alle Objekte die auf dem Spielfeld dargestellt werden.
+ - Versteck
+ - Dieb
+ - Chef
+ - Latop</javadoc>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">Wird beim erstellen der Welt aufgerufen</javadoc>
+            <params/>
+            <throws/>
+            <delegate target="super" params="600,600,1" params-java="600, 600, 1"/>
+            <body>
+                <variable type="Dieb" type-java="Dieb" name="player" value="new Dieb()" value-java=" new Dieb()" enable="true"/>
+                <variable type="Chef" type-java="Chef" name="martin" value="new Chef()" value-java=" new Chef()" enable="true"/>
+                <call expression="addObject(player,400,400)" expression-java="addObject(player, 400, 400)" enable="true"/>
+                <call expression="addObject(martin,150,50)" expression-java="addObject(martin, 150, 50)" enable="true"/>
+                <call expression="addObject(new Laptop(),50,50)" expression-java="addObject( new Laptop(), 50, 50)" enable="true"/>
+                <call expression="addObject(new Laptop(),500,500)" expression-java="addObject( new Laptop(), 500, 500)" enable="true"/>
+                <call expression="addObject(new Laptop(),50,550)" expression-java="addObject( new Laptop(), 50, 550)" enable="true"/>
+                <call expression="addObject(new Versteck(),250,150)" expression-java="addObject( new Versteck(), 250, 150)" enable="true"/>
+                <call expression="addObject(new Versteck(),300,550)" expression-java="addObject( new Versteck(), 300, 550)" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods/>
+</class>

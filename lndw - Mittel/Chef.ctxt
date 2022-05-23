@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Chef
+comment0.text=\n\ Will\ den\ Dieb\ fangen\ so\ das\ er\ nicht\ alle\ Laptops\ klaut\n
+comment1.params=
+comment1.target=Chef()
+comment1.text=\n\ \n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Chef\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=3
